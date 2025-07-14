@@ -5,6 +5,7 @@ description = "Multi Agent Workflow with LangGraph"
 readme = "README.md"
 requires-python = "==3.11.*"
 dependencies = [
+    "arxiv>=2.1.0",
     "jupyter>=1.1.1",
     "langchain>=0.3.26",
     "langchain-community>=0.3.27",
@@ -14,4 +15,5 @@ dependencies = [
     "pymupdf>=1.26.3",
     "pyppeteer>=2.0.0",
     "tavily-python>=0.7.9",
+    "mermaid-py>=0.3.0"
 ]
