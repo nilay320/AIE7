@@ -10,7 +10,7 @@ def main():
             "messages": [
                 {
                     "role": "human",
-                    "content": "What is the MuonClip optimizer, and what paper did it first appear in?",
+                    "content": "Use the mcp_echo tool with text='hello world'.",
                 }
             ]
         },
