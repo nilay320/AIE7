@@ -28,7 +28,7 @@ async def main() -> None:
     base_url = 'http://localhost:10000'
 
     # Increase timeout for LLM responses (default is 5 seconds, which is too short)
-    async with httpx.AsyncClient(timeout=httpx.Timeout(60.0)) as httpx_client:
+    async with httpx.AsyncClient(timeout=httpx.Timeout(120.0)) as httpx_client:
         # Initialize A2ACardResolver
         resolver = A2ACardResolver(
             httpx_client=httpx_client,

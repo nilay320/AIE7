@@ -81,15 +81,63 @@ uv run python app/test_client.py
 
 Build a LangGraph Graph to "use" your application.
 
+##### ✅ Answer:
+
+LangGraph Graph built in `app/client_agent_graph.py`.
+
+To Run, you can execute:
+
+`uv run python app/client_agent_graph.py "What are the latest developments in artificial intelligence?"`
+
+
 Do this by creating a Simple Agent that can make API calls to the 🤖Agent Node above through the A2A protocol. 
 
 ### ❓ Question #1:
 
 What are the core components of an `AgentCard`?
 
+##### ✅ Answer:
+
+The core components of an AgentCard include:
+
+1. **Service Categories**: High-level capabilities the agent provides (e.g., "research agent," "document analysis," "web search services")
+
+2. **Specific Functions**: Granular, callable operations with parameters (e.g., `search_arxiv(query, max_results)`, `summarize_pdf(file_path)`)
+
+3. **Interaction Modalities**: Supported communication formats (text, forms, media, etc.)
+
+4. **API Endpoints**: How other agents can actually invoke these functions
+
+5. **Authentication Requirements**: Security protocols needed for communication
+
+6. **Agent Metadata**: Basic identifying information (name, version, description)
+
+The AgentCard serves as both a "business card" for discovery (showing what services are available) and a "technical manual" for integration (showing exactly how to call specific functions). This enables agents to find each other and collaborate without exposing internal implementation details.
+
+
 ### ❓ Question #2:
 
 Why is A2A (and other such protocols) important in your own words?
+
+##### ✅ Answer:
+
+A2A protocols are fundamentally important because they solve the **agent interoperability problem** that will become critical as AI systems become more autonomous and specialized.
+
+**The Core Problem:**
+Without standardized protocols, AI agents are like people who speak different languages trying to work together. Even if each agent is incredibly capable individually, they can't collaborate effectively across different frameworks, companies, or technologies.
+
+**Why A2A Matters:**
+
+1. **Enables True Multi-Agent Collaboration**: Instead of building monolithic "do everything" agents, we can create specialized agents (research, analysis, writing, coding) that work together on complex tasks. This is more efficient and allows each agent to excel in its domain.
+
+2. **Future-Proofs AI Development**: As we move toward autonomous agents like Devin, Codex, and others, they need standardized ways to discover each other's capabilities and coordinate work. A2A provides this foundation.
+
+3. **Creates an AI Ecosystem**: Just like HTTP enabled the modern web by allowing any website to link to any other website, A2A enables an ecosystem where the best agent for any specific task can be discovered and utilized, regardless of who built it.
+
+4. **Practical Business Value**: Organizations can leverage specialized agents from different vendors without vendor lock-in, and agents can be composed together to solve problems that no single agent could handle alone.
+
+**In Simple Terms:**
+A2A is like creating a universal translator for AI agents. It transforms isolated AI tools into a collaborative network where specialized agents can work together seamlessly, unlocking capabilities that are greater than the sum of their parts.
 
 ### 🚧 Advanced Build:
 
